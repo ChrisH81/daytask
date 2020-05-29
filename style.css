@@ -47,6 +47,9 @@ textarea{
 .disabled-event {
   background-color: grey;
 }
+.current-event {
+  background-color: red;
+}
 
 .save-button {
   float: left;

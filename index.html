@@ -69,12 +69,20 @@
 
       const eventDiv = document.createElement('textarea');
       eventDiv.className = 'event-div';
-      timeBlock.append(eventDiv);
+
+      if (localStorage.getItem(hourDiv.innerText)) {
+
+      }
+      eventDiv.innerHTML = localStorage.getItem(hourDiv.innerText) || "";
 
       if ( date.hours() > i ) {
         eventDiv.className += " disabled-event"
         eventDiv.disabled = true;
+      } else if (date.hours() === i) {
+        eventDiv.className += " current-event"
       }
+      timeBlock.append(eventDiv);
+
       const saveButton = document.createElement('button');
       saveButton.className = 'save-button';
       saveButton.innerHTML = "Save";
