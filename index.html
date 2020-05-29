@@ -76,10 +76,13 @@
       eventDiv.innerHTML = localStorage.getItem(hourDiv.innerText) || "";
 
       if ( date.hours() > i ) {
-        eventDiv.className += " disabled-event"
+        eventDiv.className += " past-event"
         eventDiv.disabled = true;
       } else if (date.hours() === i) {
         eventDiv.className += " current-event"
+      }
+      else {
+        eventDiv.className+=" future-event"
       }
       timeBlock.append(eventDiv);
 

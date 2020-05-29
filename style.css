@@ -44,11 +44,15 @@ textarea{
     padding: 0px;
     height: 100%;
 }
-.disabled-event {
+.past-event {
   background-color: grey;
 }
 .current-event {
   background-color: red;
+}
+
+.future-event{
+  background-color:green;
 }
 
 .save-button {
